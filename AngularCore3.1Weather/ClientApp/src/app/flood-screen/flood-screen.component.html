@@ -1,0 +1,21 @@
+<h2>Enter area:</h2>
+<input typeof="text" [(ngModel)]="myText">
+<button (click)="clickFunction()" class="btn btn-success">Click Me</button>
+{{ myText }}
+
+<table class="table table-striped pre-scrollable" *ngIf="Floods && Floods.length > 0">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Message</th>
+      <th>Severity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let flood of Floods">
+      <td>{{flood.description}}</td>
+      <td>{{flood.message}}</td>
+      <td>{{flood.severityLevel}}</td>
+    </tr>
+  </tbody>
+</table>
